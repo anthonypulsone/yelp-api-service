@@ -1,11 +1,10 @@
 package com.anthonypulsone.yelpfusionapiproxycache.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import java.io.Serializable;
 
 
-public class Business {
+public class Business implements Serializable {
     private String id;
     private String alias;
     private String name;

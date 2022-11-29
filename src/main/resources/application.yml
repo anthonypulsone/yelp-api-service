@@ -1,3 +1,8 @@
 yelpApi:
   url: 'https://api.yelp.com/v3/businesses/'
   token: 'Bearer hKt4mWbqbQi3sjOln0L6NLIwpdpe3gW_lnlvw2NL8wB2KXqNbMBFXU9VIMbF0nBPrzgGqjodIcceCKcangg58f5WErASIDGF7PtpFaVhKXDxL68QJ397D6GC4BVkY3Yx'
+
+spring:
+  cache:
+    redis:
+      time-to-live: 24H

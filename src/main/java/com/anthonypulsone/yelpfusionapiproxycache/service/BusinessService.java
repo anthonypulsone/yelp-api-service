@@ -7,22 +7,19 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import static java.lang.Thread.sleep;
-
-
 @Service
 public class BusinessService {
 
     private final BusinessClient businessClient;
-
 
     @Autowired
     public BusinessService(BusinessClient businessClient) {
         this.businessClient = businessClient;
     }
 
-    @Cacheable("businesses")
+    @Cacheable("business")
     public Business getBusiness(String businessId) {
+
         ResponseEntity<Business> businessResponse = businessClient.getBusiness(businessId);
         return businessResponse.getBody();
     }

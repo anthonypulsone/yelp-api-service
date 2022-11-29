@@ -2,7 +2,9 @@ package com.anthonypulsone.yelpfusionapiproxycache.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Location {
+import java.io.Serializable;
+
+public class Location implements Serializable {
     private String address1;
     private String address2;
     private String address3;
