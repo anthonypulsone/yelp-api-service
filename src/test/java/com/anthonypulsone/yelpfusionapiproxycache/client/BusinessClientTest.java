@@ -145,7 +145,11 @@ public class BusinessClientTest {
         ResponseEntity<Business> businessResponse = businessClient.getBusiness("WavvLdfdP6g8aZTtbBQHTw");
 
         assertThat(businessResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(businessResponse.getBody()).isNotNull();
+        assertThat(businessResponse.getBody()).isInstanceOf(Business.class);
+        Business business = businessResponse.getBody();
 
+        assertThat(business.getId()).isEqualTo("WavvLdfdP6g8aZTtbBQHTw");
 
     }
 
