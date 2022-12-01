@@ -1,8 +1,9 @@
 package com.anthonypulsone.yelpfusionapiproxycache.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.io.Serializable;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Business implements Serializable {
     private String id;
@@ -14,16 +15,15 @@ public class Business implements Serializable {
     private String phone;
     @JsonProperty("display_phone")
     private String displayPhone;
+    @JsonProperty("review_count")
     private int reviewCount;
-    private Category[] categories;
+    private ArrayList<Category> categories;
     private double rating;
     private Location location;
     private Coordinates coordinates;
-    private String[] photos;
     private String price;
 
-
-    public Business(String id, String alias, String name, String imageUrl, String url, String phone, String displayPhone, int reviewCount, Category[] categories, double rating, Location location, Coordinates coordinates, String[] photos, String price) {
+    public Business(String id, String alias, String name, String imageUrl, String url, String phone, String displayPhone, int reviewCount, ArrayList<Category> categories, double rating, Location location, Coordinates coordinates, String price) {
         this.id = id;
         this.alias = alias;
         this.name = name;
@@ -36,7 +36,6 @@ public class Business implements Serializable {
         this.rating = rating;
         this.location = location;
         this.coordinates = coordinates;
-        this.photos = photos;
         this.price = price;
     }
 
@@ -104,11 +103,11 @@ public class Business implements Serializable {
         this.reviewCount = reviewCount;
     }
 
-    public Category[] getCategories() {
+    public ArrayList<Category> getCategories() {
         return categories;
     }
 
-    public void setCategories(Category[] categories) {
+    public void setCategories(ArrayList<Category> categories) {
         this.categories = categories;
     }
 
@@ -134,14 +133,6 @@ public class Business implements Serializable {
 
     public void setCoordinates(Coordinates coordinates) {
         this.coordinates = coordinates;
-    }
-
-    public String[] getPhotos() {
-        return photos;
-    }
-
-    public void setPhotos(String[] photos) {
-        this.photos = photos;
     }
 
     public String getPrice() {

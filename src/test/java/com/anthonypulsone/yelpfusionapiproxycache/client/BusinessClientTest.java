@@ -13,11 +13,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
-@RestClientTest(BusinessClient.class)
+@RestClientTest(YelpClient.class)
 public class BusinessClientTest {
 
     @Autowired
-    private BusinessClient businessClient;
+    private YelpClient yelpClient;
 
     @Autowired
     private MockRestServiceServer mockRestServiceServer;
@@ -142,7 +142,7 @@ public class BusinessClientTest {
         this.mockRestServiceServer.expect(requestTo("WavvLdfdP6g8aZTtbBQHTw"))
                 .andRespond(withSuccess(result, MediaType.APPLICATION_JSON));
 
-        ResponseEntity<Business> businessResponse = businessClient.getBusiness("WavvLdfdP6g8aZTtbBQHTw");
+        ResponseEntity<Business> businessResponse = yelpClient.getBusiness("WavvLdfdP6g8aZTtbBQHTw");
 
         assertThat(businessResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(businessResponse.getBody()).isNotNull();
