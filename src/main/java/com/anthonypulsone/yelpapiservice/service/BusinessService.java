@@ -1,7 +1,7 @@
-package com.anthonypulsone.yelpfusionapiproxycache.service;
+package com.anthonypulsone.yelpapiservice.service;
 
-import com.anthonypulsone.yelpfusionapiproxycache.client.YelpClient;
-import com.anthonypulsone.yelpfusionapiproxycache.model.Business;
+import com.anthonypulsone.yelpapiservice.client.YelpClient;
+import com.anthonypulsone.yelpapiservice.model.Business;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;

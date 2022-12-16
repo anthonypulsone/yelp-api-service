@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.anthonypulsone</groupId>
-	<artifactId>yelp-fusion-api-proxy-cache</artifactId>
+	<artifactId>yelp-api-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>yelp-fusion-api-proxy-cache</name>
-	<description>API proxy with caching for the yelp fusion API</description>
+	<name>yelp-api-service</name>
+	<description>API proxy service for the yelp fusion API that enables OAuth 2 jwt authentication as well as provides caches business results to a redis cache</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

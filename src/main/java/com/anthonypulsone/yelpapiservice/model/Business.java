@@ -1,4 +1,4 @@
-package com.anthonypulsone.yelpfusionapiproxycache.model;
+package com.anthonypulsone.yelpapiservice.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,6 +1,6 @@
-package com.anthonypulsone.yelpfusionapiproxycache.client;
+package com.anthonypulsone.yelpapiservice.client;
 
-import com.anthonypulsone.yelpfusionapiproxycache.model.Business;
+import com.anthonypulsone.yelpapiservice.model.Business;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.client.RestClientTest;

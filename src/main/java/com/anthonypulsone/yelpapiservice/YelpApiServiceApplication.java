@@ -1,4 +1,4 @@
-package com.anthonypulsone.yelpfusionapiproxycache;
+package com.anthonypulsone.yelpapiservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
 @EnableCaching
-public class YelpFusionApiProxyCacheApplication {
+public class YelpApiServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(YelpFusionApiProxyCacheApplication.class, args);
+		SpringApplication.run(YelpApiServiceApplication.class, args);
 	}
 
 }
